@@ -42,8 +42,11 @@ class PrometheeSolver(Solver):
     def calc_ranking(self):
         pass
 
-    def flow_to_complete_preorder(self, flow):
+    def flow_to_complete_preorder(self, flow, dir):
         sort_idx = np.argsort(flow)
+
+        if dir == 1:
+            sort_idx = np.flip(sort_idx)
 
         preorder = [[sort_idx[0]]]
 

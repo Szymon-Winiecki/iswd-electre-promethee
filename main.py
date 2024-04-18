@@ -40,7 +40,7 @@ def main():
 
     # print(data)
 
-    solver = Electre_III_Solver(criteria, data)
+    solver = Promethee_II_Solver(criteria, data)
     solver.solve()
 
 main()

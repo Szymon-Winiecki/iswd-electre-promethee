@@ -21,6 +21,6 @@ class Promethee_II_Solver(PrometheeSolver):
     def calc_ranking(self):
         super().calc_ranking()  
 
-        complete_ranking = self.flow_to_complete_preorder(self.net_flow)
+        complete_ranking = self.flow_to_complete_preorder(self.net_flow, dir=1)
 
         draw_complete_preorder(complete_ranking, "results/prometheeII", "complete_ranking.png")
